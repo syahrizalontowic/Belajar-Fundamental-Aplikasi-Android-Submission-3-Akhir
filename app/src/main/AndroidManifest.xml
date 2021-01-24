@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.syahrizal.githubusertree">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission android:name="com.syahrizal.githubusertree.READ_DATABASE" />
+    <permission android:name="com.syahrizal.githubusertree.WRITE_DATABASE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icongithub"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icongithub"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.AboutActivity"></activity>
+        <activity android:name=".ui.activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.StarReposActivity" />
+        <activity android:name=".ui.activity.SettingsActivity" />
+        <activity android:name=".ui.activity.FavoriteActivity" />
+        <activity android:name=".ui.activity.UserActivity" />
+
+        <provider
+            android:name=".provider.MyContentProvider"
+            android:authorities="com.syahrizal.githubusertree"
+            android:enabled="true"
+            android:exported="true"
+            android:readPermission="com.syahrizal.githubusertree.READ_DATABASE"
+            android:writePermission="com.syahrizal.githubusertree.WRITE_DATABASE" />
+
+        <receiver
+            android:name=".service.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.activity.DetailActivity" />
+        <activity android:name=".ui.activity.MainActivity" />
+    </application>
+
+</manifest>

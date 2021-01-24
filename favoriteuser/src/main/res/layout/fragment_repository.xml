@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    tools:context=".ui.fragment.RepositoryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <SearchView
+            style="@style/SearchViewTheme"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_color_search"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@null"
+            android:queryHint="Find a repository..."
+            android:searchIcon="@null"
+            android:theme="@style/SearchViewTheme" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/darker_gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRepos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_repository" />
+
+        <LinearLayout
+            android:id="@+id/linear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/btPrevious"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:background="@drawable/bg_color_favorite"
+                android:text="Previous"
+                android:textColor="@color/colorNameRepository"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btNext"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="5dp"
+                android:background="@drawable/bg_color_favorite"
+                android:text="Next"
+                android:textColor="@color/colorNameRepository"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

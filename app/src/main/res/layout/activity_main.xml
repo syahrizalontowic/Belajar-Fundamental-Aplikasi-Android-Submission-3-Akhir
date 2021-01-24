@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MainActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@color/colorPrimaryDark"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/anton_regular"
+                android:text="@string/cari_pengguna"
+                android:textColor="@color/colorAccent"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btFavorite"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_baseline_favoritewhite_24" />
+
+                <Button
+                    android:id="@+id/btSettings"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/ic_baseline_settings_24" />
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <SearchView
+        android:id="@+id/searcUser"
+        style="@style/SearchViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/bg_color_search"
+        android:iconifiedByDefault="false"
+        android:queryBackground="@null"
+        android:queryHint="@string/cari"
+        android:theme="@style/SearchViewTheme"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+    <ImageView
+        android:id="@+id/imgGithub"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logogitbiru"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

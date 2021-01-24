@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Github Favorit</string>
+    <string name="github">GitHub</string>
+    <string name="version">Id</string>
+    <string name="v_1_0">v. 1.0</string>
+    <string name="github_user_app">Github User Favorite</string>
+    <string name="cari">Type in your Github Username</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nama">Syahrizal Ontowic</string>
+    <string name="html">https://github.com/syahrizalontowic</string>
+    <string name="username">syahrizalontowic</string>
+    <string name="biodata">Dont complain, just do it</string>
+    <string name="email">rigadotru3@gmail.com</string>
+    <string name="blog">https://testerwordweb.wordpress.com/</string>
+    <string name="favorite">Favorite</string>
+    <string name="repos"> 23 Repository</string>
+    <string name="follows">11 Followers 12 Following</string>
+    <string name="descRepo">Can Certificates</string>
+    <string name="cari_pengguna">Search for Users</string>
+    <string name="pilih_bahasa">Select Language</string>
+    <string name="tema_gelap">Dark Theme</string>
+    <string name="pengingat_hari">Reminder of the Day</string>
+    <string name="author">Syahrizal</string>
+    <string name="star_repository">Star Repository</string>
+    <string name="penguna_favorit">User Favorite</string>
+    <string name="reminder_on">Pengingat hidup pukul :</string>
+    <string name="pengaturan">Settings</string>
+    <string name="reminder_open_app">Daily Reminder</string>
+</resources>

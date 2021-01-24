@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.syahrizal.favoriteuser">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.syahrizal.githubusertree.READ_DATABASE" />
+    <uses-permission android:name="com.syahrizal.githubusertree.WRITE_DATABASE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconfav"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/iconfav"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.activity.SplashActivity"></activity>
+        <activity android:name=".ui.activity.DetailActivity" />
+        <activity android:name=".ui.activity.FavoriteActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".service.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ui.activity.MainActivity" />
+        <activity android:name=".ui.activity.SettingsActivity" />
+        <activity android:name=".ui.activity.UserActivity" />
+    </application>
+
+</manifest>

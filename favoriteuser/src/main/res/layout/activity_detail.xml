@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.DetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark"
+        app:contentInsetStart="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/anton_regular"
+                    android:text="Detail User"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btSettings"
+                        style="?attr/borderlessButtonStyle"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginEnd="12dp"
+                        android:background="@drawable/ic_baseline_settings_24" />
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <RelativeLayout
+            android:id="@+id/form_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:src="@android:color/holo_purple"
+                    android:visibility="gone"
+                    app:civ_border_color="@color/colorungu"
+                    app:civ_border_width="6dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:src="@drawable/syahriz" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/anton_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/nama"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="24sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/imgUser"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="@string/username"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toEndOf="@id/imgUser"
+                    app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+                <LinearLayout
+                    android:id="@+id/linear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="12dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvBlog">
+
+                    <TextView
+                        android:id="@+id/tvFollow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_baseline_people_outline_24"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/follows"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tvRepo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:drawableStart="@drawable/ic_baseline_star_outline_24"
+                        android:gravity="center_vertical"
+                        android:text="@string/repos"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvBio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="12dp"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/biodata"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgUser" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/blog"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+
+                <TextView
+                    android:id="@+id/tvBlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="12dp"
+                    android:drawableStart="@drawable/ic_baseline_link_24"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/blog"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@id/tvEmail" />
+
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/linear" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tabs" />
+
+                <ProgressBar
+                    android:id="@+id/pb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="25dp"
+                    app:layout_constraintBottom_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="parent"
+                    app:layout_constraintHorizontal_bias="0.498"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="parent"
+                    app:layout_constraintVertical_bias="0.315" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
